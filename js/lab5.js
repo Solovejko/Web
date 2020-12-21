@@ -70,6 +70,9 @@ function countTeg() {
 
     for (let i = 0; i < a.length; i++)
         console.log(document.getElementsByTagName(a[i])[0].tagName, ':', document.getElementsByTagName(a[i]).length)
+}
+
+function clearConsole(){
     console.clear()
 }
 
