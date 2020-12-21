@@ -6,11 +6,15 @@
         <meta name="description" content="Мой сайт-портфолио">
         <meta name="keywords" content="HTML, CSS, JafaScript, Портфолио, Сайт">
         <link rel="stylesheet" href="css/outlines.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     </head>
 
     <body>
+
+    <script src="js/lab5.js">
+
+    </script>
+
     <header>
         <div>
             <h1>Сайт-портфолио</h1>
@@ -98,10 +102,12 @@
         </div>
         <aside>
             <div class="asideText">
-                <q>Если программист признан <br> незаменимым,
-                    то лучшеe, что можно <br> сделать — избавиться от <br> него как можно скорее.</q><br>
-                <cite>© Кто-то из интернета</cite><br>
-                <strong>(тут могла быть ваша реклама)</strong>
+                <button onclick="printArray()">Вывести массив</button>
+                <button onclick="min()">Минимум</button>
+                <button onclick="max()">Максимум</button>
+                <button onclick="med()">Медиана</button>
+                <button onclick="merge()">Отсортировать</button>
+                <button onclick="countTeg()">Колличество тегов</button>
             </div>
         </aside>
     </main>
@@ -110,7 +116,7 @@
     <footer>
         <div class="rotated">
             <span>Данный сайт создан Соловейко Александром Сергеевичем в целях получения зачета</span>
-            <time datetime="2020-12-17">2020-12-17</time>
+            <time datetime="2020-12-23">2020-12-23</time>
         </div>
     </footer>
     </body>
