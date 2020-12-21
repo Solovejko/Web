@@ -56,9 +56,6 @@ function merge(array=randArray, l = 0, r = randArray.length - 1){
             array[k] = secondArray[j++];
         else
             array[k] = firstArray[i++];
-
-    if ((l == 0) && (r == randArray.length - 1))
-        console.log("Массив отсортирован");
 }
 
 function countTeg() {
