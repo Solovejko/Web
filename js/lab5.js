@@ -94,7 +94,12 @@ function closeForm() {
 }
 
 function send(){
-    let elem = document.getElementById("list2");
-    let dv = document.getElementById("gg");
-    elem.appendChild(dv)
+    let myLog = document.getElementById("messages");
+    let myMassage = document.getElementById("mess");
+    let myDiv = document.createElement("div");
+    myLog.appendChild(myDiv);
+    myLog.lastElementChild.className = "message"
+    myLog.lastElementChild.innerHTML = myMassage.value;
+    let f = document.getElementById("frm")
+    f.elements['msg'].value = '';
 }

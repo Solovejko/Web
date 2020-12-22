@@ -198,3 +198,18 @@ h1, h2 {
   height: 700px;
   background: #13132E;
 }
+
+.message {
+  background: #E6E6E6;
+  color: black;
+  height: 50px;
+  border: 3px inset #13132E;
+  padding: 10px;
+  border-radius: 20px;
+  display: table;
+
+  max-width: 1000px;
+
+  margin-right: 0;
+  margin-left: auto;
+}
