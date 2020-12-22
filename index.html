@@ -109,6 +109,10 @@
                     <button onclick="clearConsole()">Очистить консоль</button>
                 </div>
             </aside>
+
+            <div id="gg">
+                гавно
+            </div>
         </main>
 
         <a href="#" id="windMain">
@@ -126,6 +130,22 @@
                 </div>
             </div>
         </a>
+
+        <button class="open-button" onclick="openForm()">Чат</button>
+
+        <div class="chat-popup" id="myForm">
+            <div class="pole" id="massages">
+                <div>
+                    авыаыаыва
+                </div>
+            </div>
+            <div class="form-container">
+                <textarea placeholder="Сообщение..." name="msg" required></textarea>
+
+                <button type="button" class="btn" onclick="send()">Отправить</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+            </div>
+        </div>
 
         <footer>
             <div class="rotated">

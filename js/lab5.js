@@ -85,3 +85,16 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+}
+
+function send(){
+    let elem = document.getElementById("list2");
+    let dv = document.getElementById("gg");
+    elem.appendChild(dv)
+}
