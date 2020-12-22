@@ -199,7 +199,7 @@ h1, h2 {
   background: #13132E;
 }
 
-.message {
+.message, .messageAnswer {
   background: #E6E6E6;
   color: black;
   height: 50px;
@@ -212,4 +212,9 @@ h1, h2 {
 
   margin-right: 0;
   margin-left: auto;
+}
+
+.messageAnswer {
+  margin-left: 0;
+  margin-right: auto;
 }

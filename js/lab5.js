@@ -102,4 +102,10 @@ function send(){
     myLog.lastElementChild.innerHTML = myMassage.value;
     let f = document.getElementById("frm")
     f.elements['msg'].value = '';
+
+    myDiv = document.createElement("div");
+    myLog.appendChild(myDiv);
+    myLog.lastElementChild.className = "messageAnswer"
+    myLog.lastElementChild.innerHTML = "Пошел в жопу";
+
 }
