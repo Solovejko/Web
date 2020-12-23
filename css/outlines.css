@@ -197,6 +197,8 @@ h1, h2 {
 .pole {
   height: 700px;
   background: #13132E;
+  overflow: auto;
+  max-width: 500px;
 }
 
 .message, .messageAnswer {
