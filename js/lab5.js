@@ -1,5 +1,7 @@
 const maxRand = 10000;
 
+let messId = 0;
+
 let randArray = [];
 
 let adjective=["Быстрый", "Большой", "Сильный", "Слабый", "Желтый", "Волшебный",
@@ -113,9 +115,22 @@ function send(){
     let myDiv = document.createElement("div");
     myLog.appendChild(myDiv);
     myLog.lastElementChild.className = "message"
-    myLog.lastElementChild.innerHTML = myMassage.value;
+    myLog.lastElementChild.innerHTML = myMassage.value + "    ";
     myLog.lastElementChild.scrollIntoView({alignToTop: "false", behavior: "smooth"});
+
     let ms = myMassage.value;
+
+    myLog.lastElementChild.appendChild(document.createElement("button"));
+    myLog.lastElementChild.lastElementChild.className = "exit";
+    myLog.lastElementChild.lastElementChild.innerHTML = "x";
+    myLog.lastElementChild.setAttribute("id", messId.toString());
+    myLog.lastElementChild.lastElementChild.setAttribute("onclick", "del(" + messId.toString() +")");
+    messId += 1;
+
+   /* myLog.lastElementChild.lastElementChild.onclick = function del(myLog.lastElementChild){
+        mess.className = "messageNone"
+    }*/
+
     let f = document.getElementById("frm")
     f.elements['msg'].value = '';
 
@@ -135,4 +150,8 @@ function send(){
         }
         myLog.lastElementChild.scrollIntoView({alignToTop: "false", behavior: "smooth"});
     }, 900)
+}
+
+function del(messId) {
+    document.getElementById(messId).className = "messageNone"
 }
