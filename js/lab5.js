@@ -127,10 +127,6 @@ function send(){
     myLog.lastElementChild.lastElementChild.setAttribute("onclick", "del(" + messId.toString() +")");
     messId += 1;
 
-   /* myLog.lastElementChild.lastElementChild.onclick = function del(myLog.lastElementChild){
-        mess.className = "messageNone"
-    }*/
-
     let f = document.getElementById("frm")
     f.elements['msg'].value = '';
 
@@ -140,13 +136,15 @@ function send(){
         myLog.lastElementChild.className = "messageAnswer"
 
         if (ms == ""){
-
             myLog.lastElementChild.innerHTML = "Напишите что-нибудь :c"
         }
+        else if (ms.substr(0, 5) == "calc ") {
+            myLog.lastElementChild.innerHTML = math.evaluate(ms.substr(5, ms.length));
+        }
         else {
-            myLog.lastElementChild.innerHTML = adjective[getRandomInt(0, adjective.length - 1)] + " " +
-                noun[getRandomInt(0, noun.length - 1)] + " " +
-                verb[getRandomInt(0, verb.length - 1)];
+                myLog.lastElementChild.innerHTML = adjective[getRandomInt(0, adjective.length - 1)] + " " +
+                    noun[getRandomInt(0, noun.length - 1)] + " " +
+                    verb[getRandomInt(0, verb.length - 1)];
         }
         myLog.lastElementChild.scrollIntoView({alignToTop: "false", behavior: "smooth"});
     }, 900)
