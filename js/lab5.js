@@ -2,6 +2,20 @@ const maxRand = 10000;
 
 let randArray = [];
 
+let adjective=["Быстрый", "Большой", "Сильный", "Слабый", "Желтый", "Волшебный",
+    "Скучный", "Великий", "Ужасный", "Золотой", "Классический", "Смешной",
+    "Добрый", "Злой", "Мягкий", "Толстый", "Свежий", "Древний", "Сухой",
+    "Низкий", "Народный", "Искренний", "Острый", "Пустой", "Гладкий", "Горячий"]
+
+let noun=["котик", "ветер", "муравей", "хлеб", "человек", "овощ", "лимон",
+    "кофе", "дедушка", "дом", "телефон", "стакан", "яблоко", "ремень", "камень",
+    "блокнот", "мальчик", "глаз", "нос"]
+
+let verb=["бежит", "гуляет", "плывет", "ждет", "прыгает", "плачет", "думает",
+    "курит", "кушает", "спит", "играет", "улетает", "лежит", "умирает", "сидит",
+    "уходит", "читает", "смотрит", "наблюдает", "слушает", "удивляется", "работает",
+    "отдыхает"]
+
 for (let i = 0; i < 1000; i++){
     randArray.push(getRandomInt(1, maxRand));
 }
@@ -100,12 +114,25 @@ function send(){
     myLog.appendChild(myDiv);
     myLog.lastElementChild.className = "message"
     myLog.lastElementChild.innerHTML = myMassage.value;
+    myLog.lastElementChild.scrollIntoView({alignToTop: "false", behavior: "smooth"});
+    let ms = myMassage.value;
     let f = document.getElementById("frm")
     f.elements['msg'].value = '';
 
-    myDiv = document.createElement("div");
-    myLog.appendChild(myDiv);
-    myLog.lastElementChild.className = "messageAnswer"
-    myLog.lastElementChild.innerHTML = "Пошел в жопу";
+    setTimeout(() => {
+        myDiv = document.createElement("div");
+        myLog.appendChild(myDiv);
+        myLog.lastElementChild.className = "messageAnswer"
 
+        if (ms == ""){
+
+            myLog.lastElementChild.innerHTML = "Напишите что-нибудь :c"
+        }
+        else {
+            myLog.lastElementChild.innerHTML = adjective[getRandomInt(0, adjective.length - 1)] + " " +
+                noun[getRandomInt(0, noun.length - 1)] + " " +
+                verb[getRandomInt(0, verb.length - 1)];
+        }
+        myLog.lastElementChild.scrollIntoView({alignToTop: "false", behavior: "smooth"});
+    }, 900)
 }
